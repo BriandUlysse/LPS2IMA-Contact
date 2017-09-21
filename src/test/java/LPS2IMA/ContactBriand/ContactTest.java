@@ -18,17 +18,21 @@ public class ContactTest {
 		Contact c = new Contact("NomNormal","telephone");
 		assertEquals("Erreur Contact, getNom, cas normal","NomNormal",c.getNom());
 		assertEquals("Erreur Contact, getTelephone cas normal","telephone",c.getTelephone());
-		
-		c = new Contact("nom","telephone");
+	}
+	
+	@Test
+	public void testContactCourt() {
+		Contact c = new Contact("nom","telephone");
 		assertEquals("Erreur Contact, getNom, nom =3","nom",c.getNom());
 		assertEquals("Erreur Contact, getTelephone, nom =3","telephone",c.getTelephone());
-		
-		c = new Contact("azertyuiopazertyuiopazertyuiopazertyuiop","telephone");
+	}
+	
+	@Test
+	public void testContactLong() {
+		Contact c = new Contact("azertyuiopazertyuiopazertyuiopazertyuiop","telephone");
 		assertEquals("Erreur Contact, getNom, nom =40","azertyuiopazertyuiopazertyuiopazertyuiop",c.getNom());
 		assertEquals("Erreur Contact, getTelephone, nom =40","telephone",c.getTelephone());
 	}
-	
-	
 	
 	
 }

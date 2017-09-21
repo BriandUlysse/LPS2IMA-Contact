@@ -16,7 +16,7 @@ public class ContactServiceMockTest extends MockTest {
 	
 	//On déclare que le test doit lever l'exception "ContactExist"
 	@Test(expected=ContactExistException.class)
-	public void testCasContactDoublon() throws ContactExistException{
+	public void testCasContactDoublon() throws Exception{
 		//Phase d'enregistrement des comportements du mock
 		String nom ="contact";
 		// On attend l'appel a isContactExist avec la valeur "contact"
@@ -29,12 +29,12 @@ public class ContactServiceMockTest extends MockTest {
 		replayAll();
 		//Appel du service
 		
-		service.creerContact(nom, "06666666");
+		service.creerContact(nom, "0223412868");
 	}
 	
 	//On déclare que le test ne doit pas lever l'exception "ContactExist"
 	@Test
-	public void testCasContactValide() throws ContactExistException{
+	public void testCasContactValide() throws Exception{
 		//SETUP 
 		
 		//Phase d'enregistrement des comportements du mock
@@ -54,7 +54,7 @@ public class ContactServiceMockTest extends MockTest {
 		
 		//Appel du service
 		// EXECUTION DE LA METHODE DE SERVICE A TESTER 
-		String telephone = "06666666";
+		String telephone = "0223412868";
 		service.creerContact(nom, telephone);
 		
 		// VERIFICATION DU TEST
