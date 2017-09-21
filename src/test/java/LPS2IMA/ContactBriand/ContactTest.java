@@ -28,17 +28,6 @@ public class ContactTest {
 		assertEquals("Erreur Contact, getTelephone, nom =40","telephone",c.getTelephone());
 	}
 	
-	@Test
-	public void testContactLimites() {
-		Contact a = new Contact("azertyuiopazertyuiopazertyuiopazertyuiopA","telephone");
-		assertEquals("Erreur Contact, getNom, nom =41",null,a.getNom());
-		assertEquals("Erreur Contact, getTelephone, nom =41",null,a.getTelephone());
-		
-		Contact b = new Contact("aa","telephone");
-		assertEquals("Erreur Contact, getNom, nom =2",null,b.getNom());
-		assertEquals("Erreur Contact, getTelephone, nom =2",null,b.getTelephone());
-		
-	}
 	
 	
 	
